@@ -4,9 +4,80 @@
     <title>Boggle Game</title>
     <link media="screen" rel="stylesheet" type="text/css" href="boggle.css">
     <script type="text/javascript" src="jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
   </head>
   <body>
-    <h1>Let's create your boggle game</h1>
-    <script type="text/javascript" src="boggle.js"></script>
+    <h1></h1>
+    <div class="row">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4">
+          <div class="col-md-12 ">
+            <h1>Let's create your boggle game</h1>
+            <table class="table table-bordered text-center">
+              <tbody style="font-size:30px;">
+                <tr>
+                  <td><input type="button" value="Shake" class="btn btn-success" onclick="boogle_board()"/></td>
+                  <td> Input X :<input type="textbox" id="baris" size="4" maxlength="4" class="form-control input-sm" required=""/></td>
+                  <td>Input Y :<input type="textbox" id="kolom" size="4" maxlength="4" class="form-control input-sm" required=""/></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+
+    </script>
+    <script type="text/javascript">
+    let wordRandom = (value) =>{
+    var text = "";
+    var possible = value;
+
+    for( var i=0; i < possible.length; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+  }
+
+
+  let boogle_board = () =>{
+
+    var random = wordRandom("ABCDEFGHIJKLMNOPQRSTUVWXYZSDDSS")
+    var word_random = random.split("")
+
+    //write your code here
+    var chunk = document.getElementById("baris").value
+    console.log(chunk);
+    var boogleboard = [];
+    var length = chunk*document.getElementById("kolom").value
+
+    for (var i=0;i< length;i+=chunk)
+      {
+        boogleboard.push(word_random.slice(i,i+chunk))
+      }
+    console.log(boogleboard);
+  }
+
+  //word_random("ABASASCJASDJASDJASDJASJD");
+
+    </script>
   </body>
 </html>
