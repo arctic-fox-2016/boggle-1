@@ -1,1 +1,43 @@
 /*write your css here*/
+#kotakBoggle{
+  background-color: grey;
+  width: 200px;
+  height: 200px;
+
+}
+#table1{
+  background-color: white
+}
+
+#input {
+  width:25px;
+  height: 20px;
+  margin-left:5px;
+}
+
+.field{
+  background-color: white;
+  width:50px;
+  height: 50px;
+}
+
+#kotak1{
+  position: relative;
+  top:10px;
+  left:5px;
+}
+#kotak2{
+  position: relative;
+  top:10px;
+  left:80px;
+}
+#kotak3{
+  position: relative;
+  top:10px;
+  left:150px;
+}
+#kotak4{
+  position: relative;
+  top:10px;
+  left:20px;
+}
