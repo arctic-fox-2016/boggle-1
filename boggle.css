@@ -1,1 +1,22 @@
 /*write your css here*/
+table, th, td {
+     border: 3px solid grey;
+     width: 150px;
+     height: 25px;
+     background-color: white;
+     border-radius: 3px;
+     text-align: center;
+     font-size: 30px;
+     font-weight: 700;
+}
+input[type="textbox"]{
+  width: 30px;
+  font-size: 12px;
+  font-weight: bolder;
+  text-align: left;
+  border: 2px solid grey;
+  border-radius: 7px;
+}
+table {
+    border-collapse: collapse;
+}
